@@ -1,117 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Ganamos VIP</title>
 
 <style>
+  * { box-sizing: border-box; }
 
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at center, #1b1f3a, #0f1226);
-  font-family: Arial, sans-serif;
-}
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #1b1f3a, #0f1226);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
 
-.container {
-  text-align: center;
-}
+  /* CONTENEDOR CENTRAL */
+  .stage {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-/* LOGO */
-.logo {
-  width: 260px;
-  margin-bottom: 5px;
-}
+  /* LOGO */
+  .logo {
+    width: 260px;
+    max-width: 90%;
+    height: auto;
+    display: block;
+  }
 
-/* PERRO */
-.perro {
-  width: 170px;
-  margin-bottom: 5px;
-}
+  /* PERRO */
+  .perro {
+    width: 170px;
+    max-width: 70%;
+    height: auto;
+    display: block;
+  }
 
-/* BOTON VIP */
-.vip {
-  display: inline-block;
-  border: 2px solid #f5c96a;
-  color: #f5c96a;
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 13px;
-  margin-bottom: 12px;
-}
+  /* CARD */
+  .card {
+    width: 320px;
+    max-width: 100%;
+    background: linear-gradient(145deg, #1e5eff, #0038b8);
+    padding: 26px 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    position: relative;
+  }
 
-/* CARD AZUL */
-.card {
-  background: linear-gradient(145deg, #1e5eff, #0038b8);
-  padding: 35px 25px;
-  border-radius: 20px;
-  width: 320px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
-  margin: 0 auto;
-}
+  /* VIP ARRIBA DE LA CARD */
+  .vip-btn {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid #f5c96a;
+    color: #f5c96a;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(2px);
+  }
 
-.card h2 {
-  color: white;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
+  .card h2 {
+    color: #fff;
+    font-size: 18px;
+    margin: 16px 0 8px;
+  }
 
-.card p {
-  color: white;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
+  .card p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0 0 16px;
+  }
 
-.green-btn {
-  display: block;
-  background: linear-gradient(145deg, #3cff00, #15b800);
-  color: black;
-  font-weight: bold;
-  padding: 12px;
-  border-radius: 30px;
-  text-decoration: none;
-  margin-bottom: 10px;
-  transition: 0.3s;
-}
+  .green-btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(145deg, #3cff00, #15b800);
+    color: #000;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 0 0 10px;
+    transition: 0.2s;
+  }
+  .green-btn:hover { transform: scale(1.03); }
 
-.green-btn:hover {
-  transform: scale(1.05);
-}
-
-.card small {
-  color: white;
-  font-size: 12px;
-}
-
+  .card small {
+    color: #fff;
+    font-size: 12px;
+    display: block;
+  }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="stage">
+    <img src="/images/logo.png" class="logo" alt="Ganamos" />
+    <img src="/images/perro.png.jpeg" class="perro" alt="Perro" />
 
-  <img src="/images/logo.png" class="logo" alt="logo">
-  <img src="/images/perro.png.jpeg" class="perro" alt="perro">
+    <div class="card">
+      <div class="vip-btn">ACCESO VIP</div>
 
-  <div class="vip">ACCESO VIP</div>
+      <h2>👉 PLATAFORMA ACTIVA 24 HS 👈</h2>
+      <p>Toca el botón de abajo y empezá ya mismo 👇</p>
 
-  <div class="card">
-    <h2>👉 PLATAFORMA ACTIVA 24 HS 👈</h2>
-    <p>Toca el botón de abajo y empezá ya mismo 👇</p>
+      <a href="https://www.linkify.com.ar/api/soporte?id=hfn82b" class="green-btn">
+        👉 ACTIVAR ACCESO AHORA 👈
+      </a>
 
-    <a href="https://www.linkify.com.ar/api/soporte?id=hfn82b" class="green-btn">
-      👉 ACTIVAR ACCESO AHORA 👈
-    </a>
-
-    <small>ATENCIÓN Y RETIROS INMEDIATOS</small>
+      <small>ATENCIÓN Y RETIROS INMEDIATOS</small>
+    </div>
   </div>
-
-</div>
 
 </body>
 </html>

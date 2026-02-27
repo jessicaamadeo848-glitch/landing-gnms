@@ -43,7 +43,7 @@ module.exports = async (req, res) => {
     // 🔧 PONÉ TUS DATOS ACÁ
     const PIXEL_ID = "4267102870205197";
     const ACCESS_TOKEN = "EAATNLtCti8gBQ7BAaV2LfrY8TZBaSXTjItDDJZBipX5rf7ashudhcRHy1WqDN0Du2PvZCt018QnD7QZCzgqTvOpai2IaD8rkFqkZAb2ZBi9BUpJf3Mg7qJfq6gc13DC0X5WqdTF7jCcNyVtkLNl6qZAMpsRiCAVaLwOEzFmZCNzqOV6mNE5tJyC538WZAXNEmYVIVZAgZDZD";
-    const TEST_EVENT_CODE = "TEST81889"; // el tuyo
+  
 
     // Evento
     const event_name = body.event_name || "Lead";

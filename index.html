@@ -6,100 +6,113 @@
 <title>Ganamos VIP</title>
 
 <style>
-* { box-sizing: border-box; }
+*{box-sizing:border-box;}
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at center, #1b1f3a, #0f1226);
-  font-family: Arial, sans-serif;
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:radial-gradient(circle at center,#1b1f3a,#0f1226);
+  font-family:Arial, sans-serif;
 }
 
-/* CONTENEDOR CENTRAL */
-.stage {
-  width: 100%;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 4px;
+/* CONTENEDOR */
+.stage{
+  width:100%;
+  max-width:420px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:6px;
 }
 
-/* LOGO */
-.logo {
-  width: 240px;
-  display: block;
-  margin-bottom: 0px;
+/* LOGO GRANDE */
+.logo{
+  width:320px;
+  max-width:95%;
+  margin-bottom:-5px;
+  filter:drop-shadow(0 0 12px rgba(255,255,255,0.25));
 }
 
 /* PERRO */
-.perro {
-  width: 170px;
-  display: block;
-  margin-top: -6px;
-  margin-bottom: 2px;
+.perro{
+  width:180px;
+  margin-top:-10px;
 }
 
-/* BOTÓN VIP */
-.vip-btn {
-  border: 2px solid #f5c96a;
-  color: #f5c96a;
-  padding: 6px 18px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 13px;
-  margin-top: 2px;
-  margin-bottom: 8px;
+/* BOTÓN VIP EFECTO */
+.vip-btn{
+  border:2px solid #f5c96a;
+  color:#f5c96a;
+  padding:6px 22px;
+  border-radius:25px;
+  font-weight:bold;
+  font-size:13px;
+  letter-spacing:1px;
+  margin-top:4px;
+  margin-bottom:8px;
+  background:rgba(0,0,0,0.25);
+  animation:vipGlow 2s infinite alternate;
 }
 
-/* CARD AZUL */
-.card {
-  width: 320px;
-  max-width: 100%;
-  background: linear-gradient(145deg, #1e5eff, #0038b8);
-  padding: 28px 22px;
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+@keyframes vipGlow{
+  from{ box-shadow:0 0 5px #f5c96a; }
+  to{ box-shadow:0 0 18px #f5c96a; }
 }
 
-/* TITULO */
-.card h2 {
-  color: white;
-  font-size: 18px;
-  margin-bottom: 10px;
+/* CARD */
+.card{
+  width:320px;
+  background:linear-gradient(145deg,#1e5eff,#0038b8);
+  padding:28px 22px;
+  border-radius:20px;
+  box-shadow:0 0 25px rgba(0,0,0,0.5);
 }
 
-/* TEXTO */
-.card p {
-  color: white;
-  font-size: 14px;
-  margin-bottom: 18px;
+.card h2{
+  color:white;
+  font-size:18px;
+  margin-bottom:10px;
 }
 
-/* BOTÓN VERDE */
-.green-btn {
-  display: block;
-  background: linear-gradient(145deg, #3cff00, #15b800);
-  color: black;
-  font-weight: bold;
-  padding: 12px;
-  border-radius: 30px;
-  text-decoration: none;
-  margin-bottom: 10px;
-  transition: 0.2s;
+.card p{
+  color:white;
+  font-size:14px;
+  margin-bottom:18px;
 }
 
-.green-btn:hover {
-  transform: scale(1.03);
+/* BOTÓN WHATSAPP CON EFECTO */
+.green-btn{
+  display:block;
+  background:linear-gradient(145deg,#3cff00,#15b800);
+  color:black;
+  font-weight:bold;
+  padding:14px;
+  border-radius:30px;
+  text-decoration:none;
+  margin-bottom:10px;
+  font-size:15px;
+  position:relative;
+  overflow:hidden;
+  animation:whGlow 1.8s infinite alternate;
 }
 
-.card small {
-  color: white;
-  font-size: 12px;
+@keyframes whGlow{
+  from{ box-shadow:0 0 8px #3cff00; }
+  to{ box-shadow:0 0 22px #3cff00; }
+}
+
+.green-btn:hover{
+  transform:scale(1.05);
+  transition:0.3s;
+}
+
+.card small{
+  color:white;
+  font-size:12px;
 }
 </style>
 </head>
@@ -118,7 +131,7 @@ body {
     <p>Toca el botón de abajo y empezá ya mismo 👇</p>
 
     <a href="https://www.linkify.com.ar/api/soporte?id=hfn82b" class="green-btn">
-      👉 ACTIVAR ACCESO AHORA 👈
+      💬 ACTIVAR ACCESO POR WHATSAPP
     </a>
 
     <small>ATENCIÓN Y RETIROS INMEDIATOS</small>

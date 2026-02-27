@@ -26,24 +26,23 @@ body{
   flex-direction:column;
   align-items:center;
   text-align:center;
-  gap:6px;
 }
 
-/* LOGO GRANDE */
+/* LOGO MÁS CERCA DEL PERRO */
 .logo{
   width:320px;
   max-width:95%;
-  margin-bottom:-5px;
-  filter:drop-shadow(0 0 12px rgba(255,255,255,0.25));
+  margin-bottom:-15px; /* 🔥 lo acerca al perro */
+  filter:drop-shadow(0 0 10px rgba(255,255,255,0.25));
 }
 
 /* PERRO */
 .perro{
   width:180px;
-  margin-top:-10px;
+  margin-bottom:6px;
 }
 
-/* BOTÓN VIP EFECTO */
+/* BOTÓN VIP */
 .vip-btn{
   border:2px solid #f5c96a;
   color:#f5c96a;
@@ -52,15 +51,8 @@ body{
   font-weight:bold;
   font-size:13px;
   letter-spacing:1px;
-  margin-top:4px;
-  margin-bottom:8px;
+  margin-bottom:12px;
   background:rgba(0,0,0,0.25);
-  animation:vipGlow 2s infinite alternate;
-}
-
-@keyframes vipGlow{
-  from{ box-shadow:0 0 5px #f5c96a; }
-  to{ box-shadow:0 0 18px #f5c96a; }
 }
 
 /* CARD */
@@ -84,7 +76,7 @@ body{
   margin-bottom:18px;
 }
 
-/* BOTÓN WHATSAPP CON EFECTO */
+/* BOTÓN WHATSAPP CON EFECTO PRO */
 .green-btn{
   display:block;
   background:linear-gradient(145deg,#3cff00,#15b800);
@@ -97,12 +89,33 @@ body{
   font-size:15px;
   position:relative;
   overflow:hidden;
-  animation:whGlow 1.8s infinite alternate;
+  box-shadow:0 0 15px #3cff00;
+  animation:whPulse 1.5s infinite;
 }
 
-@keyframes whGlow{
-  from{ box-shadow:0 0 8px #3cff00; }
-  to{ box-shadow:0 0 22px #3cff00; }
+/* efecto pulso */
+@keyframes whPulse{
+  0%{ box-shadow:0 0 10px #3cff00; }
+  50%{ box-shadow:0 0 30px #3cff00; }
+  100%{ box-shadow:0 0 10px #3cff00; }
+}
+
+/* efecto brillo que pasa */
+.green-btn::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-75%;
+  width:50%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.6),transparent);
+  transform:skewX(-20deg);
+  animation:shine 2.5s infinite;
+}
+
+@keyframes shine{
+  0%{ left:-75%; }
+  100%{ left:125%; }
 }
 
 .green-btn:hover{

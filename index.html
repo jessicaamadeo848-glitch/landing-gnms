@@ -1,103 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ganamos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ganamos VIP</title>
 
-  <!-- Meta Pixel -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '4267102870205197');
-    fbq('track', 'PageView');
-  </script>
+fbq('init', '4267102870205197');
+fbq('track', 'PageView');
+</script>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #ffffff;
-      text-align: center;
-    }
+<style>
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(180deg,#2b0a3d,#0f0f1a);
+color:white;
+text-align:center;
+}
 
-    .container {
-      max-width: 400px;
-    }
+.container{
+padding:40px 20px;
+}
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-      color: #333;
-    }
+.logo{
+font-size:28px;
+font-weight:bold;
+margin-bottom:20px;
+}
 
-    p {
-      color: #777;
-      margin-bottom: 25px;
-      font-size: 16px;
-    }
+.vip{
+margin:20px 0;
+}
 
-    .btn {
-      background-color: #c5bfa6;
-      padding: 14px 30px;
-      text-decoration: none;
-      color: #000;
-      font-size: 16px;
-      display: inline-block;
-      transition: 0.2s ease;
-    }
+.card{
+background:linear-gradient(180deg,#1e3cff,#3e0cff);
+padding:25px;
+border-radius:20px;
+max-width:400px;
+margin:20px auto;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
 
-    .btn:hover {
-      opacity: 0.85;
-    }
-  </style>
+.green-btn{
+display:inline-block;
+margin-top:15px;
+padding:15px 25px;
+border-radius:30px;
+background:linear-gradient(90deg,#00ff6a,#00c853);
+color:white;
+font-weight:bold;
+text-decoration:none;
+font-size:16px;
+box-shadow:0 0 15px #00ff6a;
+}
+
+.small{
+font-size:13px;
+opacity:0.8;
+margin-top:10px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>Bienvenido</h1>
-    <p>Accedé a tu beneficio exclusivo</p>
+<div class="container">
 
-    <a id="btn-linkify"
-       class="btn"
-       href="https://www.linkify.com.ar/api/soporte?id=hfn82b"
-       target="_blank">
-       Acceder ahora
-    </a>
-  </div>
+<div class="logo">🂡 GANAMOS.NET</div>
 
-  <script>
-    document.getElementById("btn-linkify").addEventListener("click", function() {
+<div class="vip">
+<img src="https://i.imgur.com/4Q8Z6pA.png" width="150">
+</div>
 
-      // Evento navegador
-      if (window.fbq) {
-        fbq('track', 'Lead');
-      }
+<h3>ACCESO VIP</h3>
 
-      // Evento servidor (Conversions API)
-      fetch('/api/events', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          event_name: 'Lead'
-        })
-      }).catch(function(){});
+<div class="card">
+<h2>👉 PLATAFORMA ACTIVA 24 HS 👈</h2>
+<p>Toca el botón de abajo y empezá ya mismo 👇</p>
 
-    });
-  </script>
+<a href="https://www.linkify.com.ar/api/soporte?id=hfn82b"
+class="green-btn"
+onclick="fbq('track','Lead');">
+👉 ACTIVAR ACCESO AHORA 👈
+</a>
+
+<div class="small">
+ATENCIÓN Y RETIROS INMEDIATOS
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>

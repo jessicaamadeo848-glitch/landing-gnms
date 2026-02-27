@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+export default async function (req, res) {
   const pixelId = process.env.META_PIXEL_ID;
   const accessToken = process.env.META_ACCESS_TOKEN;
 

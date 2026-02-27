@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GANAMOS VIP</title>
+<title>Ganamos VIP</title>
 
 <!-- META PIXEL -->
 <script>
@@ -29,35 +29,41 @@ margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:linear-gradient(180deg,#2b0a3d,#0d0d1f);
 color:white;
-text-align:center;
+overflow-x:hidden;
 }
 
-.container{
-padding:30px 20px;
-}
-
-.logo img{
+/* LOGO */
+.logo{
+position:absolute;
+top:40px;
+left:40px;
 width:220px;
-margin-bottom:20px;
+z-index:1000;
 }
 
-.perro img{
-width:160px;
-margin:15px 0;
+/* PERRO */
+.perro{
+position:absolute;
+top:150px;
+left:60px;
+width:220px;
+z-index:1000;
 }
 
-.acceso{
-font-weight:bold;
-letter-spacing:2px;
-margin-bottom:15px;
+/* CONTENIDO CENTRAL */
+.center{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
 }
 
 .card{
 background:linear-gradient(180deg,#1e3cff,#3e0cff);
-padding:25px;
+padding:30px;
 border-radius:20px;
-max-width:380px;
-margin:20px auto;
+width:360px;
+text-align:center;
 box-shadow:0 0 25px rgba(0,0,0,0.6);
 }
 
@@ -66,7 +72,7 @@ margin:0 0 10px 0;
 }
 
 .card p{
-margin:0 0 20px 0;
+margin-bottom:20px;
 }
 
 .green-btn{
@@ -84,28 +90,22 @@ box-shadow:0 0 15px #00ff6a;
 .small{
 font-size:13px;
 opacity:0.8;
-margin-top:12px;
+margin-top:10px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-
 <!-- LOGO -->
-<div class="logo">
-<img src="/logo.png">
-</div>
+<img src="/logo.png" class="logo">
 
 <!-- PERRO -->
-<div class="perro">
-<img src="/perro.png">
-</div>
+<img src="/perro.png" class="perro">
 
-<div class="acceso">ACCESO VIP</div>
-
+<div class="center">
 <div class="card">
+
 <h2>👉 PLATAFORMA ACTIVA 24 HS 👈</h2>
 <p>Toca el botón de abajo y empezá ya mismo 👇</p>
 
@@ -120,7 +120,6 @@ ATENCIÓN Y RETIROS INMEDIATOS
 </div>
 
 </div>
-
 </div>
 
 </body>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ganamos</title>
 
   <!-- Meta Pixel -->
@@ -19,38 +19,78 @@
     fbq('init', '4267102870205197');
     fbq('track', 'PageView');
   </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #c5bfa6;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+      display: inline-block;
+    }
+  </style>
 </head>
 
-<body style="text-align:center; font-family:Arial; padding:40px;">
+<body>
 
-  <h1>Bienvenido</h1>
-  <p>Accedé a tu beneficio exclusivo</p>
+  <div class="container">
+    <h1>Bienvenido</h1>
+    <p>Accedé a tu beneficio exclusivo</p>
 
-  <button id="btn-lead" style="padding:15px 30px; font-size:18px; cursor:pointer;">
-    Acceder ahora
-  </button>
+    <a id="btn-linkify"
+       class="btn"
+       href="https://www.linkify.com.ar/api/soporte?id=hfn82b"
+       target="_blank">
+       Acceder ahora
+    </a>
+  </div>
 
   <script>
-    document.getElementById("btn-lead").addEventListener("click", function() {
+    document.getElementById("btn-linkify").addEventListener("click", function() {
 
       // Pixel navegador
-      fbq('track', 'Lead');
+      if (window.fbq) {
+        fbq('track', 'Lead');
+      }
 
-      // Enviar a servidor (Conversions API)
+      // Servidor (Conversions API)
       fetch('/api/events', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           event_name: 'Lead',
           email: '',
           phone: ''
         })
-      });
-
-      // Redirección opcional (si querés WhatsApp)
-      // window.location.href = "https://wa.me/549XXXXXXXXXX";
+      }).catch(function(){});
 
     });
   </script>

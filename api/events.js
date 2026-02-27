@@ -1,29 +1,34 @@
-export default async function (req, res) {
-  const pixelId = process.env.META_PIXEL_ID;
-  const accessToken = process.env.META_ACCESS_TOKEN;
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).send('Method Not Allowed');
+  }
 
-  const body = {
-    data: [
+  try {
+    const pixelId = process.env.META_PIXEL_ID;
+    const accessToken = process.env.META_ACCESS_TOKEN;
+
+    const response = await fetch(
+      `https://graph.facebook.com/v18.0/${pixelId}/events?access_token=${accessToken}`,
       {
-        event_name: "Lead",
-        event_time: Math.floor(Date.now() / 1000),
-        action_source: "website",
-        user_data: {
-          client_ip_address: req.headers["x-forwarded-for"] || req.socket.remoteAddress,
-          client_user_agent: req.headers["user-agent"],
-        },
-      },
-    ],
-  };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          data: [
+            {
+              event_name: 'Lead',
+              event_time: Math.floor(Date.now() / 1000),
+              action_source: 'website'
+            }
+          ]
+        })
+      }
+    );
 
-  await fetch(
-    `https://graph.facebook.com/v18.0/${pixelId}/events?access_token=${accessToken}`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
-    }
-  );
+    const data = await response.json();
 
-  res.status(200).json({ success: true });
+    return res.status(200).json({ success: true, meta: data });
+
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
 }

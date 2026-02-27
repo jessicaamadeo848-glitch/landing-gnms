@@ -17,22 +17,20 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* CONTENEDOR GENERAL */
 .container {
   text-align: center;
-  position: relative;
 }
 
 /* LOGO */
 .logo {
   width: 260px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 /* PERRO */
 .perro {
-  width: 160px;
-  margin-bottom: 10px;
+  width: 170px;
+  margin-bottom: 5px;
 }
 
 /* BOTON VIP */
@@ -40,11 +38,11 @@ body {
   display: inline-block;
   border: 2px solid #f5c96a;
   color: #f5c96a;
-  padding: 5px 18px;
+  padding: 6px 18px;
   border-radius: 20px;
   font-weight: bold;
   font-size: 13px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 /* CARD AZUL */
@@ -54,23 +52,21 @@ body {
   border-radius: 20px;
   width: 320px;
   box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  margin: 0 auto;
 }
 
-/* TITULO */
 .card h2 {
   color: white;
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-/* TEXTO */
 .card p {
   color: white;
   font-size: 14px;
   margin-bottom: 20px;
 }
 
-/* BOTON VERDE */
 .green-btn {
   display: block;
   background: linear-gradient(145deg, #3cff00, #15b800);
@@ -87,93 +83,6 @@ body {
   transform: scale(1.05);
 }
 
-.card small {
-  color: white;
-  font-size: 12px;
-}
-
-</style>
-}
-
-/* CONTENEDOR CENTRAL */
-.center {
-  text-align: center;
-  position: relative;
-}
-
-/* LOGO */
-.logo {
-  position: absolute;
-  top: -80px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 320px;
-}
-
-/* PERRO */
-.perro {
-  width: 180px;
-  margin-bottom: 20px;
-}
-
-/* CARD */
-.card {
-  background: linear-gradient(145deg, #1e5eff, #0038b8);
-  padding: 35px 25px;
-  border-radius: 20px;
-  width: 320px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
-  position: relative;
-}
-
-/* BOTÓN VIP */
-.vip-btn {
-  position: absolute;
-  top: -18px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: transparent;
-  border: 2px solid #f5c96a;
-  color: #f5c96a;
-  padding: 5px 16px;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-/* TITULO */
-.card h2 {
-  color: white;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-/* TEXTO */
-.card p {
-  color: white;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-/* BOTÓN VERDE */
-.green-btn {
-  display: block;
-  background: linear-gradient(145deg, #3cff00, #15b800);
-  color: black;
-  font-weight: bold;
-  padding: 12px;
-  border-radius: 30px;
-  text-decoration: none;
-  margin-bottom: 10px;
-  transition: 0.3s;
-}
-
-.green-btn:hover {
-  transform: scale(1.05);
-}
-
-/* TEXTO CHICO */
 .card small {
   color: white;
   font-size: 12px;
@@ -184,28 +93,22 @@ body {
 
 <body>
 
-<div class="center">
+<div class="container">
 
-  <!-- LOGO -->
   <img src="/images/logo.png" class="logo" alt="logo">
-
-  <!-- PERRO -->
   <img src="/images/perro.png.jpeg" class="perro" alt="perro">
 
-  <!-- CARD -->
+  <div class="vip">ACCESO VIP</div>
+
   <div class="card">
-
-    <div class="vip-btn">ACCESO VIP</div>
-
     <h2>👉 PLATAFORMA ACTIVA 24 HS 👈</h2>
     <p>Toca el botón de abajo y empezá ya mismo 👇</p>
 
-    <a href="https://https://www.linkify.com.ar/api/soporte?id=hfn82b" class="green-btn">
+    <a href="https://www.linkify.com.ar/api/soporte?id=hfn82b" class="green-btn">
       👉 ACTIVAR ACCESO AHORA 👈
     </a>
 
     <small>ATENCIÓN Y RETIROS INMEDIATOS</small>
-
   </div>
 
 </div>

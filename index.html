@@ -33,7 +33,7 @@ body{
   width:320px;
   max-width:95%;
   margin-bottom:-12px;
-  filter:drop-shadow(0 0 12px rgba(255,255,255,0.3));
+  filter:drop-shadow(0 0 10px rgba(255,255,255,0.25));
 }
 
 /* PERRO */
@@ -51,7 +51,7 @@ body{
   font-weight:bold;
   font-size:14px;
   margin-bottom:18px;
-  background:rgba(0,0,0,0.3);
+  background:rgba(0,0,0,0.25);
   letter-spacing:1px;
 }
 
@@ -80,43 +80,30 @@ body{
   margin-bottom:20px;
 }
 
-/* BOTÓN WHATSAPP */
+/* BOTÓN WHATSAPP FINO */
 .green-btn{
   display:block;
   width:100%;
-  padding:16px;
-  border-radius:40px;
-  font-size:16px;
+  padding:15px;
+  border-radius:38px;
+  font-size:15px;
   font-weight:600;
-  background:linear-gradient(90deg,#4cd964,#34c759);
+  background:#38c172;
   color:#ffffff;
   text-decoration:none;
-  transition:all 0.3s ease;
-  box-shadow:0 8px 20px rgba(52,199,89,0.25);
+  transition:all 0.25s ease;
+  box-shadow:0 6px 14px rgba(0,0,0,0.25);
 }
 
-/* efecto suave al pasar */
 .green-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 12px 28px rgba(52,199,89,0.35);
+  background:#32b768;
+  transform:translateY(-1px);
+  box-shadow:0 8px 18px rgba(0,0,0,0.30);
 }
 
-/* efecto leve constante */
-.green-btn{
-  animation:softPulse 3s infinite;
-}
-
-@keyframes softPulse{
-  0%{ box-shadow:0 8px 20px rgba(52,199,89,0.20);}
-  50%{ box-shadow:0 10px 24px rgba(52,199,89,0.30);}
-  100%{ box-shadow:0 8px 20px rgba(52,199,89,0.20);}
-
-}
-
-@keyframes pulse{
-  0%{ box-shadow:0 0 15px rgba(94,232,94,0.7);}
-  50%{ box-shadow:0 0 45px rgba(94,232,94,1);}
-  100%{ box-shadow:0 0 15px rgba(94,232,94,0.7);}
+.green-btn:active{
+  transform:scale(0.98);
+  box-shadow:0 4px 10px rgba(0,0,0,0.25);
 }
 
 .card small{
@@ -142,7 +129,7 @@ body{
     <p>Toca el botón de abajo y empezá ya mismo 👇</p>
 
     <a href="https://www.linkify.com.ar/api/soporte?id=hfn82b" class="green-btn">
-      👉 ACTIVAR ACCESO AHORA 👈
+      💬 ACTIVAR ACCESO POR WHATSAPP
     </a>
 
     <small>ATENCIÓN Y RETIROS INMEDIATOS</small>

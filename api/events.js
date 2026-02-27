@@ -28,11 +28,21 @@ export default async function handler(req, res) {
     const test_event_code = body.test_event_code || null;
 
     const eventData = {
-      data: [
-        {
-          event_name: "Lead",
-          event_time: Math.floor(Date.now() / 1000),
-          action_source: "website"
+  data: [
+    {
+      event_name: "Lead",
+      event_time: Math.floor(Date.now() / 1000),
+      action_source: "website",
+      event_source_url: body.event_source_url || "https://landing-gnms.vercel.app",
+      user_data: {
+        client_ip_address:
+          req.headers["x-forwarded-for"] || req.socket.remoteAddress,
+        client_user_agent: req.headers["user-agent"]
+      }
+    }
+  ]
+};
+        
         }
       ]
     };

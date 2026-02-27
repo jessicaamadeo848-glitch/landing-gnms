@@ -9,15 +9,85 @@
   * { box-sizing: border-box; }
 
   body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(circle at center, #1b1f3a, #0f1226);
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #1b1f3a, #0f1226);
+  font-family: Arial, sans-serif;
+}
+
+.stage {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+/* LOGO */
+.logo {
+  width: 240px;
+  display: block;
+}
+
+/* PERRO */
+.perro {
+  width: 170px;
+  display: block;
+}
+
+/* VIP */
+.vip-btn {
+  border: 2px solid #f5c96a;
+  color: #f5c96a;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* CARD */
+.card {
+  width: 320px;
+  max-width: 100%;
+  background: linear-gradient(145deg, #1e5eff, #0038b8);
+  padding: 30px 22px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.green-btn {
+  display: block;
+  background: linear-gradient(145deg, #3cff00, #15b800);
+  color: black;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.card small {
+  color: white;
+  font-size: 12px;
+}
+   
 
   /* CONTENEDOR CENTRAL */
   .stage {
@@ -109,23 +179,24 @@
 
 <body>
 
-  <div class="stage">
-    <img src="/images/logo.png" class="logo" alt="Ganamos" />
-    <img src="/images/perro.png.jpeg" class="perro" alt="Perro" />
+<div class="stage">
 
-    <div class="card">
-      <div class="vip-btn">ACCESO VIP</div>
+  <img src="/images/logo.png" class="logo">
+  <img src="/images/perro.png.jpeg" class="perro">
 
-      <h2>👉 PLATAFORMA ACTIVA 24 HS 👈</h2>
-      <p>Toca el botón de abajo y empezá ya mismo 👇</p>
+  <div class="vip-btn">ACCESO VIP</div>
 
-      <a href="https://www.linkify.com.ar/api/soporte?id=hfn82b" class="green-btn">
-        👉 ACTIVAR ACCESO AHORA 👈
-      </a>
+  <div class="card">
+    <h2>👉 PLATAFORMA ACTIVA 24 HS 👈</h2>
+    <p>Toca el botón de abajo y empezá ya mismo 👇</p>
 
-      <small>ATENCIÓN Y RETIROS INMEDIATOS</small>
-    </div>
+    <a href="https://www.linkify.com.ar/api/soporte?id=hfn82b" class="green-btn">
+      👉 ACTIVAR ACCESO AHORA 👈
+    </a>
+
+    <small>ATENCIÓN Y RETIROS INMEDIATOS</small>
   </div>
 
+</div>
+
 </body>
-</html>

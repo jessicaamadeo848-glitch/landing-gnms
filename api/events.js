@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   try {
 
     const PIXEL_ID = "4267102870205197";
-    const ACCESS_TOKEN = EAATNLtCti8gBQyEOvnvGVt3cvPNl40wrUji6Velw2oZA2ZB6REiGeeDZCY0DbcWEVaXzZCOMlrNYQeJdV1bJiXJw07av1iRyrUmjhwCNsoIoZAgFjdCJYAaFFajWmZBCGasm60BwntZCKlOrLmrPBOf00LXGUeyZBcZA1XPeOKOG42Ief7uqsCmpkaeG5aRjSidJrMgZDZD
+    const ACCESS_TOKEN = "EAATNLtCti8gBQyEOvnvGVt3cvPNl40wrUji6Velw2oZA2ZB6REiGeeDZCY0DbcWEVaXzZCOMlrNYQeJdV1bJiXJw07av1iRyrUmjhwCNsoIoZAgFjdCJYAaFFajWmZBCGasm60BwntZCKlOrLmrPBOf00LXGUeyZBcZA1XPeOKOG42Ief7uqsCmpkaeG5aRjSidJrMgZDZD"
 
     const body = req.body || {};
     const test_event_code = body.test_event_code || null;

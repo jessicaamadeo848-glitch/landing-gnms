@@ -5,127 +5,132 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ganamos VIP</title>
 
-<!-- META PIXEL -->
-<script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
-fbq('init', '4267102870205197');
-fbq('track', 'PageView');
-</script>
-
 <style>
+
 body {
   margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: radial-gradient(circle at center, #1b1f3a, #0f1226);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
+/* CONTENEDOR CENTRAL */
 .center {
   text-align: center;
   position: relative;
 }
-</style>
 
 /* LOGO */
-.logo{
-position:absolute;
-top:40px;
-left:40px;
-width:220px;
-z-index:1000;
+.logo {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
 }
 
 /* PERRO */
-.perro{
-position:absolute;
-top:150px;
-left:60px;
-width:220px;
-z-index:1000;
+.perro {
+  width: 180px;
+  margin-bottom: 20px;
 }
 
-/* CONTENIDO CENTRAL */
-.center{
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+/* CARD */
+.card {
+  background: linear-gradient(145deg, #1e5eff, #0038b8);
+  padding: 35px 25px;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  position: relative;
 }
 
-.card{
-background:linear-gradient(180deg,#1e3cff,#3e0cff);
-padding:30px;
-border-radius:20px;
-width:360px;
-text-align:center;
-box-shadow:0 0 25px rgba(0,0,0,0.6);
+/* BOTÓN VIP */
+.vip-btn {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  border: 2px solid #f5c96a;
+  color: #f5c96a;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 
-.card h2{
-margin:0 0 10px 0;
+/* TITULO */
+.card h2 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-.card p{
-margin-bottom:20px;
+/* TEXTO */
+.card p {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
-.green-btn{
-display:inline-block;
-padding:15px 25px;
-border-radius:30px;
-background:linear-gradient(90deg,#00ff6a,#00c853);
-color:white;
-font-weight:bold;
-text-decoration:none;
-font-size:16px;
-box-shadow:0 0 15px #00ff6a;
+/* BOTÓN VERDE */
+.green-btn {
+  display: block;
+  background: linear-gradient(145deg, #3cff00, #15b800);
+  color: black;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: 0.3s;
 }
 
-.small{
-font-size:13px;
-opacity:0.8;
-margin-top:10px;
+.green-btn:hover {
+  transform: scale(1.05);
 }
+
+/* TEXTO CHICO */
+.card small {
+  color: white;
+  font-size: 12px;
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- LOGO -->
-<img src="/images/logo.png" class="logo">
-
-<!-- PERRO -->
-<img src="/images/perro.png.jpeg" class="perro">
-
 <div class="center">
-<div class="card">
 
-<h2>👉 PLATAFORMA ACTIVA 24 HS 👈</h2>
-<p>Toca el botón de abajo y empezá ya mismo 👇</p>
+  <!-- LOGO -->
+  <img src="/images/logo.png" class="logo" alt="logo">
 
-<a href="https://www.linkify.com.ar/api/soporte?id=hfn82b"
-class="green-btn"
-onclick="fbq('track','Lead');">
-👉 ACTIVAR ACCESO AHORA 👈
-</a>
+  <!-- PERRO -->
+  <img src="/images/perro.png.jpeg" class="perro" alt="perro">
 
-<div class="small">
-ATENCIÓN Y RETIROS INMEDIATOS
-</div>
+  <!-- CARD -->
+  <div class="card">
 
-</div>
+    <div class="vip-btn">ACCESO VIP</div>
+
+    <h2>👉 PLATAFORMA ACTIVA 24 HS 👈</h2>
+    <p>Toca el botón de abajo y empezá ya mismo 👇</p>
+
+    <a href="https://https://www.linkify.com.ar/api/soporte?id=hfn82b" class="green-btn">
+      👉 ACTIVAR ACCESO AHORA 👈
+    </a>
+
+    <small>ATENCIÓN Y RETIROS INMEDIATOS</small>
+
+  </div>
+
 </div>
 
 </body>

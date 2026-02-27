@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/events.js": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}

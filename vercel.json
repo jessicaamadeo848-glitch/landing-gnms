@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "api/events.js": {
-      "runtime": "nodejs20.x"
-    }
-  }
-}

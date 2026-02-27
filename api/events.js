@@ -7,9 +7,13 @@ export default async function handler(req, res) {
       {
         event_name: "Lead",
         event_time: Math.floor(Date.now() / 1000),
-        action_source: "website"
-      }
-    ]
+        action_source: "website",
+        user_data: {
+          client_ip_address: req.headers["x-forwarded-for"] || req.socket.remoteAddress,
+          client_user_agent: req.headers["user-agent"],
+        },
+      },
+    ],
   };
 
   await fetch(

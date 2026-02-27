@@ -71,7 +71,6 @@ module.exports = async (req, res) => {
           user_data,
         },
       ],
-      test_event_code: TEST_EVENT_CODE,
     };
 
     const fbUrl = `https://graph.facebook.com/v18.0/${PIXEL_ID}/events?access_token=${ACCESS_TOKEN}`;

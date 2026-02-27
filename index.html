@@ -84,15 +84,33 @@ body{
 .green-btn{
   display:block;
   width:100%;
-  padding:18px;
+  padding:16px;
   border-radius:40px;
-  font-size:17px;
-  font-weight:bold;
-  background:linear-gradient(90deg,#34d058,#5ee85e);
-  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  background:linear-gradient(90deg,#4cd964,#34c759);
+  color:#ffffff;
   text-decoration:none;
-  box-shadow:0 0 30px rgba(94,232,94,0.8);
-  animation:pulse 1.8s infinite;
+  transition:all 0.3s ease;
+  box-shadow:0 8px 20px rgba(52,199,89,0.25);
+}
+
+/* efecto suave al pasar */
+.green-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 28px rgba(52,199,89,0.35);
+}
+
+/* efecto leve constante */
+.green-btn{
+  animation:softPulse 3s infinite;
+}
+
+@keyframes softPulse{
+  0%{ box-shadow:0 8px 20px rgba(52,199,89,0.20);}
+  50%{ box-shadow:0 10px 24px rgba(52,199,89,0.30);}
+  100%{ box-shadow:0 8px 20px rgba(52,199,89,0.20);}
+
 }
 
 @keyframes pulse{
